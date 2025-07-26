@@ -1,27 +1,24 @@
-# GalleryWebApplication
+📝 Project Overview:<br/>
+This project is a simple E-commerce Products Gallery built with Angular 17 and styled using Tailwind CSS. It displays a list of product categories, allows users to filter products by category, and includes a search bar and sorting options (by name and price).<br/>
+The UI includes:<br/>
+A responsive layout using Tailwind Grid and Flex utilities.<br/>
+Loading indicators while fetching data.<br/>
+Empty state screens for no results or failed API calls.<br/>
+Clickable categories to filter products.<br/>
+Search bar with live filtering.<br/>
+Dropdown menu to sort products (A-Z, price high-to-low, low-to-high).<br/>
+Product details navigation.<br/>
+This project aims to demonstrate:<br/>
+Component-based architecture in Angular.<br/>
+State handling with clean conditional rendering.<br/>
+Modern, responsive design with Tailwind CSS.<br/>
+UX considerations like error fallback UI and visual feedback.<br/>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+️️Screenshot:<br/>
+<img width="1892" height="916" alt="Screenshot 2025-07-26 211953" src="https://github.com/user-attachments/assets/83239edd-ac49-4dea-a7cf-2b567bed6d45" />
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+🧱 Tech Stack Used:<br/>
+angular 17.<br/>
+Tailwind css.<br/>
+Fake Store API.<br/>
+Ngx spinner.<br/>
