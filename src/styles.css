@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@plugin "daisyui";
+
+
+.product{
+    border-radius: 5px;
+    border: 2px solid oklch(41.144% 0.08541 264.366);
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    cursor: pointer;
+}
+
+.mybtn{
+    padding: 5px 10px;
+    background-color: oklch(34.455% 0.06727 264.05);
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    color:#fff
+}
+
+.search-bar{
+    padding: 10px;
+    
+}

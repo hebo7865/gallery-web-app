@@ -1,0 +1,59 @@
+<div>
+    <app-navbar></app-navbar>
+    <section class="container m-auto">
+        <div class="sm:grid md:grid-cols-6 mx-4">
+            <div class="mt-5 lg:mt-40">
+                <h2 class="mb-5 text-2xl font-semibold">Products Categories:</h2>
+                <p (click)="getAllProducts()" class="cursor-pointer my-2">All Products</p>
+                @for (category of categories; track $index) {
+                    <p (click)="getCategory(category)" class="cursor-pointer my-2">{{category}}</p>
+                }
+            </div>
+            <div class="col-span-5">
+                <h1 class="text-3xl my-10 font-bold">All Products:</h1>
+
+                <div class="grid grid-cols-6 my-5 items-center">
+
+                    <input [(ngModel)]="text" type="search" placeholder="Search by Name..." class="search-bar w-full col-span-4" />
+                    <ul class="ms-3 px-1">
+                      <li>
+                        <details>
+                          <summary class="cursor-pointer">Sort by</summary>
+                          <ul class="bg-base-100 rounded-t-none p-2 w-30 md:w-50">
+                            <li><button (click)="sortProducts('name')" class="w-full text-left">Name (A - Z)</button></li>
+                            <li><button (click)="sortProducts('priceUp')" class="w-full text-left">Price (High → Low)</button></li>
+                            <li><button (click)="sortProducts('priceDown')" class="w-full text-left">Price (Low → High)</button></li>
+                          </ul>
+                        </details>
+                      </li>
+                    </ul>
+                <span class="text-bold text-xl cursor-pointer mybtn text-center" routerLink="/cart">cart</span>
+                </div>
+                <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+
+                    @for (product of productsList | search : text; track product.id) {
+                        <div class="bg-red-500 product p-2" [routerLink]="['/product/', product.id]">
+                            <img class="w-full" [src]="product.image" [alt]="product.title">
+                            <h3>{{product.title}}</h3>
+                        </div>
+                    }
+
+
+                </div>
+                <div class="not-found col-span-4">
+                @if ((productsList | search : text).length === 0) {
+                        <div class="text-center text-gray-500">
+                            <h2 class="text-2xl p-5">Products Not Found</h2>
+                            <img src="./assets/images/vecteezy_empty-folder-no-result-document-file-data-not-found_25343104.jpg" alt="No Products found" class="w-full" />
+                        </div>
+                    }
+                </div>
+
+
+            </div>
+            
+        </div>
+
+    </section>
+</div>
+

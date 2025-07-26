@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="container md:mx-20 my-10">
+        <div class="grid md:grid-cols-9 gap-4 items-center w-full p-4">
+            <div class="md:col-span-3">
+                <img class="w-1/2 max-md:m-auto" [src]="product.image" [alt]="product.image">
+            </div>
+            <div class="md:col-span-6">
+                <h2 class="text-2xl font-semibold">{{product.title}}</h2>
+                <p>${{product.price}}</p>
+                <h3 class="text-xl">{{product.category}}</h3>
+                <p>{{product.description}}</p>
+            </div>
+            <button class="mybtn" routerLink="/home">back To Home</button>
+        </div>
+    </div>
+</section>

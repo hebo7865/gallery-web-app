@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="container p-10">
+        <button class="mybtn" routerLink="/home">back to home</button>
+        <h1 class="text-3xl">Cart items</h1>
+        <div class="grid grid-cols-6 mt-5 gap-4">
+            @for (item of cartItems; track item.id) {
+            <div class="col-span-2 product">
+                <div class="grid grid-cols-3 items-center">
+                    <h2 class="text-xl m-2 col-span-1">user ID: {{item.userId}}</h2>
+                    <h3 class="text-l col-span-2">Date: {{item.date}}</h3>
+                </div>
+                @for (product of item.products; track $index) {
+                <div class="m-2">
+                    <p>product ID: {{product.productId}}</p>
+                    <p>product quantity: {{product.productId}}</p>
+                </div>
+                }
+            </div>
+            }
+        </div>
+    </div>
+</section>
